@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="src/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@200;400&display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="today">
+        <div class="clearfix">
+          <h1 style="float: left;">Boston, MA</h1>
+        </div>
+        <div class="row">
+          <div class="col-3">
+            <h2 class="temp">Now<span id="degree-one"> 25°</span></h2>
+          </div>
+          <div class="col-3">
+            <h2 class="temp">High <span id="degree-two">27°</span></h2>
+          </div>
+          <div class="col-3">
+            <h2 class="temp">Low <span id="degree-three">24°</span></h2>
+          </div>
+        </div>
+        <h3 class="conditions" id="conditions">
+          Humidity:88%, Feels Like: 26°
+        </h3>
+        <div class="clearfix">
+          <h3 class="date" style="float: right;">Today, 00:00</h3>
+        </div>
+      </div>
+      <div class="card">
+        <div class="card-body">
+          <div class="week">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">Tomorrow 21° ☀ Sunny</li>
+              <li class="list-group-item">Friday 28° 🌧 Rain Likely</li>
+              <li class="list-group-item">Saturday 24° 🌥 Partial Sun</li>
+              <li class="list-group-item">Sunday 26° ☀ Sunny</li>
+              <li class="list-group-item">Monday 20° ⛈ Thunderstorms</li>
+            </ul>
+          </div>
+          <form id="search-form">
+            <div class="form-group">
+              <input
+                type="text"
+                id="search-text"
+                placeholder="Enter City, State"
+              />
+              <button type="submit" id="search-cities" class="btn btn-primary">
+                Search 🔍
+              </button>
+              <button
+                type="button"
+                id="current-location"
+                class="btn btn-success"
+              >
+                Current Location
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+  </body>
+</html>
