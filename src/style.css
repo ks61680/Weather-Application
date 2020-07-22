@@ -26,6 +26,11 @@ h4 {
   border: 2px solid slateblue;
   border-radius: 6px;
 }
+p {
+  text-align: center;
+  color: forestgreen;
+  font-size: 14px;
+}
 .temp {
   text-align: center;
 }
